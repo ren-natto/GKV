@@ -1,0 +1,11 @@
+Nama	: Vern Dharmawan
+NIM	: 24060123130057
+Kelas	: E
+
+Kode di atas adalah program OpenGL menggunakan GLUT yang membuat simulasi sederhana dari lengan robot dengan dua bagian yaitu bahu dan siku. Program ini merepresenasikan lengan menggunakan kubus berbingkai (*wireframe cube*) yang disusun menjadi dua segmen—lengan atas dan lengan bawah. Setiap segmen dapat berputar pada sendinya menggunakan input dari keyboard.
+
+Saat program dijalankan, jendela OpenGL akan terbuka dengan latar belakang hitam dan menampilkan lengan robot. Transformasi dilakukan menggunakan fungsi `glTranslatef` untuk menggeser posisi, `glRotatef` untuk memutar bagian lengan, dan `glScalef` untuk menyesuaikan ukuran kubus agar menyerupai bentuk lengan. Lengan atas terhubung ke bahu dan bisa diputar menggunakan tombol s (searah jarum jam) dan S (berlawanan arah jarum jam). Lengan bawah, yang terhubung ke siku, dapat diputar menggunakan tombol e dan E.
+
+Untuk memastikan tampilan tetap proporsional meskipun ukuran jendela berubah, fungsi `reshape` mengatur ulang proyeksi menggunakan `gluPerspective`. Selain itu, program menggunakan *double buffering* dengan `glutSwapBuffers()` agar animasi lebih halus. Fungsi `glutKeyboardFunc` menangani input dari keyboard, memungkinkan pengguna mengontrol rotasi bahu dan siku. Program ini berjalan dalam loop utama GLUT (`glutMainLoop()`), yang terus memperbarui tampilan saat ada perubahan.
+
+Secara keseluruhan, program ini mensimulasikan lengan robot yang bisa digerakkan secara interaktif dengan tombol keyboard, menggunakan transformasi 3D dasar di OpenGL. 
